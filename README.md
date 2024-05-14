@@ -1,2 +1,0 @@
-# Doctor-Assignment
-# Doctor-clave
