@@ -31,7 +31,74 @@
   margin-left: 35%;
 
 }
+.container {
+  display: flex;
+  flex-direction: row;
+  width: -70vw;
+  height: 70vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  animation: scroll 10s linear infinite;
+  grid-gap: 4px;
+}
 
+.cont1, .cont2 {
+  height: 100%;
+  display: inline-block;
+  width: 100%;
+}
+
+.cont1 img, .cont2 img {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50vw); /* Scroll to the left */
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.navbar {
+  display: flex;
+  position: relative; /* Make the navbar fixed */
+  top: 0;
+  height: 10vh;
+  width: 100%;
+
+  margin: auto;
+  gap: 25px;
+  font-size: 28px;
+  font-weight: 50;
+  background-color: rgb(235, 217, 201);
+  
+  align-items: center;
+}
+
+.logo{
+  position: relative;
+  display: flex;
+  width: 10%;
+  padding: 0;
+  margin-top: 1;
+  margin-left:10px; /* Push the nav to the right */
+
+}
+.Services{
+  display: flex;
+  width: 60%;
+  position: relative;
+  padding: 0px;
+  
+  margin-left: 20%; /* Push the nav to the right */
+
+}
 .Dental_container {
   margin: 40px;
   padding: 30px; /* Add padding */
@@ -73,20 +140,19 @@ hr {
 
 .nav {
   background-color: rgb(255, 247, 240);
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   display: flex;
   align-items: center;
 }
 
 .nav__links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
+  display:flex;
+  margin-top: 15px;
+  position:sticky;
   padding: 0;
-  width: calc(100% - 800px); /* Adjust based on your logo width */
-  margin-left: auto; /* Push the nav to the right */
-}
+  
+  
+} 
 
 .nav__links a:hover {
   color: #ffcc00;
@@ -199,19 +265,6 @@ hr {
   color: #555; /* Adjust color as needed */
 }
 
-.navbar {
-  position: fixed; /* Make the navbar fixed */
-  top: 0;
-  height: 10vh;
-  width: 100%;
-
-  margin: auto;
-
-  background-color: rgb(235, 217, 201);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .section__container.header__container {
   margin-top: 60px; /* Adjust margin to accommodate the fixed navbar */
@@ -404,23 +457,23 @@ body {
     justify-content: space-between;
   }
 
-  .nav__bar {
+  /* .nav__bar {
     padding: 0;
     background-color: transparent;
-  }
+  } */
 
-  .nav__menu__btn {
+  /* .nav__menu__btn {
     display: none;
-  }
+  } */
 
-  .nav__links {
+  /* .nav__links {
     padding: 0;
     width: unset;
     position: static;
     transform: none;
     flex-direction: row;
     background-color: transparent;
-  }
+  } */
 
   .header {
     padding-top: 0;
